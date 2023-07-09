@@ -1,0 +1,24 @@
+@use '../components/Other/Header/Header';
+@use '../components/Other/CountriesElement/CountriesElement';
+@use '../components/Other/CountriesFilter/CountriesFilter';
+@use '../components/Other/CountryInfo/CountryInfo';
+@use './Variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+}
+
+body, #root{
+    background-color: $light;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+main{
+    padding: 72px;
+}
