@@ -1,2 +1,81 @@
+@use '../../../scss/Variables' as *;
 
+.countries-element{
+    border: 2px solid $dark;
+    border-radius: 24px;
+    box-shadow: 0 0 16px 0 $dark;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 356px;
+
+    &__img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: 2px solid $dark;
+        box-shadow: 0 0 72px 0 inset $dark;
+        height: 176px;
+        width: 100%;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px;
+
+        &--name{
+            font-size: 28px;
+            margin-bottom: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        &--props{
+            display: flex;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        &--link{
+            border: 2px solid $dark;
+            border-radius: 12px;
+            box-shadow: 0 0 4px 0 $dark;
+            color: $dark;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 24px;
+            padding: 8px 16px;
+            white-space: nowrap;
+            text-decoration: none;
+            width: min-content;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .countries-element{
+        width: 224px;
+
+        &__info{
+            padding: 12px;
+
+            &--name{
+                font-size: 20px;
+            }
+
+            &--props{
+                font-size: 16px;
+            }
+
+            &--link{
+                font-size: 16px;
+            }
+        }
+    }
+}
 

@@ -1,0 +1,47 @@
+@use '../../../scss/Variables' as *;
+
+.filter{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    &__input--text{
+        border: 2px solid $dark;
+        border-radius: 24px;
+        box-shadow: 0 0 16px 0 $dark;
+        font-size: 32px;
+        height: 64px;
+        padding-left: 16px;
+        width: 400px;
+    }
+
+    &__input--select{
+        border: 2px solid $dark;
+        border-radius: 24px;
+        box-shadow: 0 0 16px 0 $dark;
+        font-size: 32px;
+        height: 64px;
+        padding-left: 16px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 520px){
+    .filter{
+
+        &__input--text{
+            font-size: 20px;
+            height: 40px;
+            width: 200px;
+        }
+
+        &__input--select{
+            font-size: 20px;
+            height: 40px;
+            width: 164px;
+        }
+    }
+}

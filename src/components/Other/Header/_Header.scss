@@ -1,3 +1,5 @@
+@use '../../../scss/Variables' as *;
+
 .header{
     align-items: center;
     box-shadow: 0 0 8px #000;
@@ -7,6 +9,16 @@
     width: 100vw;
 
     &__title{
+        color: $dark;
         font-size: 48px;
+    }
+}
+
+@media (max-width: 520px){
+    .header{
+
+        &__title{
+            font-size: 24px;
+        }
     }
 }

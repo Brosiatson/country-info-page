@@ -14,6 +14,7 @@ function App() {
       const pickedValues = await json.map(x => {
         return {
           name: x.name.common,
+          nativeName: x.name.nativeName,
           population: x.population,
           region: x.region,
           capital: x.capital,
@@ -21,6 +22,10 @@ function App() {
             img: x.flags.png,
             alt: x.flags.alt,
           },
+          subregion: x.subregion,
+          topLevelDomain: x.tld,
+          borders: x.borders,
+          cca3: x.cca3
         }
       })
 

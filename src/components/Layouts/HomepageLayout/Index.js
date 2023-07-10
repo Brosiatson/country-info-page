@@ -7,14 +7,18 @@ import { CountriesFilter } from '../../Other/CountriesFilter/Index'
 export function HomepageLayout() {
     const {filteredCountries: {filteredCountries}} = useContext(Context)
 
-    const countriesMap = filteredCountries.map(country => <CountriesElement countryData={country}/>)
+    const countriesMap = filteredCountries.length ? 
+        filteredCountries.map(country => <CountriesElement key={country.name} countryData={country}/>) : 
+        <p className='countries-list__no-results'>No results</p>
 
     return(
         <>
             <Header />
             <main>
                 <CountriesFilter />
-                {countriesMap}
+                <section className='countries-list'>
+                    {countriesMap}
+                </section>
             </main>
         </>
     )

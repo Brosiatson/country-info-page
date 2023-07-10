@@ -1,0 +1,11 @@
+.countries-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+
+    &__no-results{
+        font-size: 72px;
+        text-align: center;
+    }
+}

@@ -1,3 +1,5 @@
+@use '../components/Layouts/HomepageLayout/HomepageLayout';
+@use '../components/Layouts/CountryLayout/CountryLayout';
 @use '../components/Other/Header/Header';
 @use '../components/Other/CountriesElement/CountriesElement';
 @use '../components/Other/CountriesFilter/CountriesFilter';
@@ -21,4 +23,10 @@ body, #root{
 
 main{
     padding: 72px;
+}
+
+@media (max-width: 520px) {
+    main{
+        padding: 48px 24px;
+    }
 }
